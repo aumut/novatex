@@ -1,0 +1,121 @@
+.content-contacts
+  color: $header_color
+  font-size: 17px
+  h2.title
+    text-transform: capitalize
+    margin: 20px 0 40px
+    +phone-down
+      margin: 35px 0 30px
+  h6.title
+    color: $header_color
+  .form--title
+    margin-bottom: 12px
+
+  .contacts__col
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    margin-bottom: 40px
+    +laptop-down
+      flex-direction: column-reverse
+    &:last-child
+      margin-bottom: 47px
+
+    .map-wrap
+      width: 628px
+      height: 237px
+      box-shadow: 2px 2px 7px 0px rgba(34, 60, 80, 0.2)
+      margin-right: 30px
+      +laptop-down
+        width: 100%
+        max-width: 1010px
+      +tablet-down
+        max-width: 760px
+        margin-right: 0
+        overflow: hidden
+      +phone-down
+        max-width: 560px
+        height: 188px
+    .contact-info
+      flex: 1
+      +laptop-down
+        margin-bottom: 15px
+      
+    .contact-wrapper
+      color: $col_greenDark
+      margin-bottom: 20px
+
+  //.address-wrapper
+    +phone-down
+      margin-bottom: 20px
+
+  .contacts-form-wrapper
+    width: 100%
+    padding-right: 13%
+    +laptop-down
+      padding-right: 0
+  .wpcf7-form, .form
+    display: flex
+    justify-content: flex-start
+    align-items: stretch
+    background: transparent
+    position: relative
+    +tablet-down
+      flex-direction: column
+      align-items: flex-start
+  .col
+    margin-right: 38px
+    +laptop-down
+      margin-right: 25px
+    +tablet-down
+      margin-right: 0
+      width: 100%
+    &.col--message
+      margin-right: 0
+      flex: 1
+      padding-top: 30px
+      & .field-group
+        max-width: 100%
+      +tablet-down
+        padding-top: 0
+
+  .field-group
+    display: flex
+    justify-content: flex-end
+    +tablet-down
+      flex-direction: column
+      max-width: 100%
+    &.mb-10
+      margin-bottom: 10px
+    &.mb-15
+      margin-bottom: 15px
+
+  .field
+    width: 100%
+    max-width: 260px
+    height: 26px
+    border: 1px solid $col_green
+    padding: 2px 12px 3px 10px
+    +tablet-down
+      max-width: 100%
+
+  textarea.field
+    max-width: 395px
+    min-width: 395px
+    height: 62px
+    resize: none
+    +tablet-down
+      max-width: 100%
+      min-width: 100%
+
+  .btn
+    max-width: 395px
+    min-width: 395px
+    -webkit-appearance: none
+    +tablet-down
+      max-width: 100%
+      min-width: 100%
+
+  .field-label
+    min-width: 75px
+    margin-right: 10px

@@ -1,0 +1,240 @@
+$grid-td-sm-h: 170px
+$grid-td-md-h: 320px
+$grid-gap: 17px
+$bl-mb: 20px
+$prod-it-title-h: 47px
+
+.content
+  padding-bottom: 206px //height of footer
+  +laptop-down
+    padding-left: 10px
+    padding-right: 10px
+  +phone-down
+    padding-bottom: 306px //height of footer
+    padding-left: 0px
+    padding-right: 0px
+
+.banner-wrap
+  display: flex
+  //min-height: 388px
+  margin-bottom: $bl-mb
+  background-color: $col_greenLight
+  +phone-down
+    flex-direction: column
+  & > *
+    width: 50%
+    +phone-down
+      width: 100%
+
+.banner-title
+  display: flex
+  align-items: center
+  padding: 82px 16px 82px 24px
+  +tablet-down
+    padding-left: 12px
+    padding-right: 8px
+  +phone-down
+    padding: 46px 10px
+
+.banner-slider
+  background-color: white
+  //$col_bgbody
+  min-height: 220px
+  display: flex
+  justify-content: center
+  flex-direction: column
+
+.prod-wrap
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-template-rows: minmax($grid-td-sm-h, auto) 1fr minmax($grid-td-sm-h, auto) 1fr
+  grid-gap: $grid-gap
+  margin-bottom: $bl-mb
+  +tablet-down
+    grid-gap: 7px
+  +phone-down
+    display: flex
+    flex-direction: column
+    grid-gap: 20px
+
+.prod-it
+  background-color: #A4B56A
+  display: flex
+  flex-direction: column
+  cursor: pointer
+  +phone-down
+    height: 350px
+
+.prod-it-img
+  background-color: #C4C4C4
+  flex-grow: 1
+  height: calc(100% - #{$prod-it-title-h})
+  overflow: hidden
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    transition: transform calc(.25s * 3) ease
+
+.prod-it:hover
+  .prod-it-img img
+    transform: scale(1.07)
+
+.prod-it-title
+  display: flex
+  min-height: $prod-it-title-h
+  justify-content: center
+  align-items: center
+  text-transform: uppercase
+  text-align: center
+
+.gr-col-2
+  grid-column: 2
+
+.prod-it-txt
+  background-color: $col_greenLight
+  height: $grid-td-sm-h
+  transition: background-color 0.4s ease 0s
+  +phone-down
+    height: 150px
+    order: -1
+  &:hover
+    background-color: $col_greenLight-hover
+
+.v1
+  .prod-it:nth-child(1)
+    grid-row: span 4
+
+  .prod-it:nth-child(2),
+  .prod-it:nth-child(4)
+    grid-row: span 2
+    height: $grid-td-md-h
+
+  .prod-it:nth-child(5)
+    grid-row: 2/5
+    grid-column: 3
+
+.v2
+  .prod-it:nth-child(3)
+    grid-row: span 4
+
+  .prod-it:nth-child(2),
+  .prod-it:nth-child(4)
+    grid-row: span 2
+    height: $grid-td-md-h
+
+  .prod-it:nth-child(5)
+    grid-row: 2/5
+    grid-column: 1
+
+.v3
+  .prod-it:nth-child(1),
+  .prod-it:nth-child(2),
+  .prod-it:nth-child(4),
+  .prod-it:nth-child(5)
+    grid-row: span 2
+    height: $grid-td-md-h
+
+  .prod-it:nth-child(6)
+    grid-row: 2/5
+    grid-column: 3
+
+.v3_1
+  .prod-it:nth-child(1),
+  .prod-it:nth-child(2),
+  .prod-it:nth-child(3),
+  .prod-it:nth-child(4)
+    grid-row: span 2
+    height: $grid-td-md-h
+
+  .prod-it:nth-child(5)
+    grid-row: 1/5
+    grid-column: 3
+
+
+.v4
+  .prod-it:nth-child(1)
+    grid-row: span 4
+  .prod-it:nth-child(2),
+  .prod-it:nth-child(3)
+    grid-row: span 2
+    height: $grid-td-md-h
+    grid-column: 2
+  .prod-it:nth-child(4)
+    grid-row: 1 / span 4
+    grid-column: 3
+  .prod-it:nth-child(5)
+    grid-row: 2/5
+    grid-column: 3
+
+.v7
+  grid-template-columns: repeat(3, 1fr)
+  grid-template-rows: minmax(auto, calc(#{$grid-td-md-h} * 2 + #{$bl-mb}))
+  .prod-it
+    grid-row: span 1
+  .prod-it-txt
+    height: auto
+
+.v7_1
+  grid-template-columns: repeat(2, 1fr)
+  grid-template-rows: minmax(auto, calc(#{$grid-td-md-h} * 2 + #{$bl-mb}))
+  .prod-it
+    grid-row: span 1
+
+
+.v9
+  grid-template-columns: repeat(3, 1fr)
+  grid-template-rows: repeat(2, minmax($grid-td-md-h, auto))
+  .prod-it:nth-child(1)
+    grid-row: span 2
+
+  .prod-it:nth-child(2),
+  .prod-it:nth-child(4)
+    grid-row: span 1
+    height: $grid-td-md-h
+
+  .prod-it-txt
+    height: auto
+    grid-row: span 2
+
+.v9_1
+  grid-template-columns: repeat(2, 1fr)
+  grid-template-rows: repeat(2, minmax(auto, $grid-td-md-h))
+
+  .prod-it:nth-child(1)
+    grid-row: span 2
+
+  .prod-it:nth-child(2),
+  .prod-it:nth-child(3)
+    grid-row: span 1
+    height: $grid-td-md-h
+
+
+.v10
+  grid-template-columns: repeat(3, 1fr)
+  grid-template-rows: repeat(2, minmax($grid-td-md-h, auto))
+  .prod-it:nth-child(3)
+    grid-row: span 2
+
+  .prod-it:nth-child(2),
+  .prod-it:nth-child(4)
+    grid-row: span 1
+    height: $grid-td-md-h
+
+  .prod-it-txt
+    height: auto
+    grid-row: span 2
+
+.v11
+  grid-template-columns: repeat(3, 1fr)
+  grid-template-rows: repeat(2, minmax(auto, $grid-td-md-h))
+
+
+.prod-wrap
+  h3.title
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 100%
+    text-transform: uppercase
+    text-align: center

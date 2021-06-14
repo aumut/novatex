@@ -1,0 +1,61 @@
+.prod-info
+  display: flex
+  justify-content: space-between
+  color: $header_color
+  margin: 50px auto
+  +phone-down
+    flex-direction: column
+    margin: 30px auto
+
+.prod-info-slider
+  min-height: 300px
+  min-width: 51%
+  //background-color: #C4C4C4
+  margin-right: 25px
+  +phone-down
+    min-height: 265px
+    margin-bottom: 20px
+    margin-right: 0px
+
+.prod-info-text
+  +phone-down
+    display: flex
+    flex-direction: column
+
+  h5.title
+    width: 70%
+    text-transform: uppercase
+    color: $col_greenDark
+    +phone-down
+      margin-bottom: 5px
+
+
+  .vd-code
+    margin-bottom: 20px
+    +phone-down
+      order: -1
+
+.vd-code
+  display: inline-block
+  font-size: 12px
+  color: $header_active
+
+.prod-price
+  font-size: 20px
+  color: $col_greenDark
+  margin-bottom: 20px
+  +phone-down
+    margin-bottom: 30px
+
+
+.prod-descr
+  +phone-down
+    font-size: 16px
+  .title
+    color: $header_color
+    margin-bottom: 10px
+
+.container-product
+  .pagination
+    +phone-down
+      display: none

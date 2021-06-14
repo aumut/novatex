@@ -1,0 +1,57 @@
+.container-catalog
+  //background-color: yellow
+  h2.title
+    //color: $col_greenDark!important
+    // margin-top: 20px
+    // margin-bottom: 40px
+    //margin-left: 47px
+    +phone-down
+      font-size: 30px
+      margin-left: 0px
+      margin-bottom: 20px
+      margin-top: 30px
+  .catalog
+    display: grid
+    grid-column-gap: 17px
+    grid-row-gap: 20px
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: repeat(2, 331px)
+    padding: 0
+    margin-bottom: 30px
+    +phone-down
+      display: flex
+      flex-direction: column
+      grid-gap: 20px
+      align-items: center
+
+  .catalog-item
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    color: $col_greenDark
+    font-family: $font_HelvNeue_Regular
+    & > img
+      width: 100%
+      height: calc(100% - 58px)
+      background-color: #C4C4C4
+      margin-bottom: 10px
+      object-fit: cover
+      +phone-down
+        height: 300px
+  .catalog-item__name
+    font-size: 20px
+    line-height: 23.86px
+    font-weight: 400
+    text-transform: uppercase
+    margin-bottom: 5px
+    +phone-down
+      font-size: 17px
+  .catalog-item__price
+    font-size: 16px
+    line-height: 19.09px
+    font-weight: 400
+    +phone-down
+      font-size: 14px
+
+  .pagination
+    margin-bottom: 20px

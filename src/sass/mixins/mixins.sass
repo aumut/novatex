@@ -1,0 +1,17 @@
+$laptop-width: 1024px
+$tablet-width: 768px
+$phone-width: 568px
+$phone_min-width: 320px
+
+=laptop-down
+  @media screen and (max-width: $laptop-width)
+    @content
+=tablet-down
+  @media screen and (max-width: $tablet-width)
+    @content
+=phone-down
+  @media screen and (max-width: $phone-width)
+    @content
+=phone_min-down
+  @media screen and (max-width: $phone_min-width)
+    @content

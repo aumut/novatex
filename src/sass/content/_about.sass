@@ -1,0 +1,47 @@
+.content-about
+  & .wpcf7-form
+    bottom: 170px
+
+.about-wrap
+  display: flex
+  color: $header_color
+  +phone-down
+    flex-direction: column
+
+.about-text
+  margin-right: 20px
+  +phone-down
+    margin-right: 0px
+    margin-bottom: 30px
+  p
+    margin-bottom: 10px
+
+.about-pict
+  min-width: 46%
+  background-color: transparent
+  & img
+    width: 100%
+    height: auto
+  +phone-down
+    min-width: unset
+    min-height: 190px
+    width: 100%
+
+.quest
+  flex-wrap: wrap
+  justify-content: space-between
+
+.quest-it
+  display: flex
+  flex-direction: column
+  margin-bottom: 20px
+  width: 410px
+  +phone-down
+    width: 100%
+  &:nth-child(2n + 2)
+    width: 450px
+    +phone-down
+      width: 100%
+  .title
+    color: $header_color
+    margin-bottom: 15px
